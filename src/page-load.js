@@ -1,14 +1,24 @@
 export default class LoadDom {
-
-    loadLandingPage() {
+    content = document.querySelector('#content');
+    headingContainer = document.createElement('div');
+    constructor() {
         this.loadHeader();
+        this.loadHeaderSubText();
     }
 
     loadHeader() {
-        const content = document.querySelector('#content');
         const heading = document.createElement('h1');
+        this.headingContainer.classList.add('heading-container');
         heading.classList.add('main-heading');
         heading.textContent = 'Downtown Delicacy';
-        content.append(heading);
+        this.headingContainer.append(heading);
+        this.content.append(this.headingContainer);
+    }
+
+    loadHeaderSubText() {
+        const subtext = document.createElement('h2');
+        subtext.classList.add('heading-subtext');
+        subtext.textContent = 'Restaurant landing page';
+        this.headingContainer.append(subtext);
     }
 }

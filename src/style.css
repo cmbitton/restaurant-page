@@ -4,11 +4,18 @@
     box-sizing: border-box;
 }
 @font-face {
-  font-family: 'MyFont';
+  font-family: 'HeadingFont';
   src: url('./assets/g80-rd-standard-demo-generic-19517/Generic-G80-RD-Standard-DEMO.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
 }
+
+@font-face {
+    font-family: 'MainFont';
+    src: url('./assets/typold-font/Typold-Book500.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+  }
 
 
 body, html{
@@ -16,14 +23,23 @@ body, html{
     height: 100vh; 
 }
 
-h1 {
-font-family: 'MyFont';
-font-size: clamp(2rem, 5vw, 5rem);
+.heading-container {
 color: white;
 position: absolute;
 top: 40%;
-left: 12%;
-width: 300px;
+left: 8%;
+width: 400px;
+}
+
+.main-heading{
+    font-size: clamp(2rem, 5vw, 6rem);
+    font-family: 'HeadingFont';
+}
+
+.heading-subtext{
+    color: #f8d882;
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-family: 'MainFont';
 }
 
 #content{
