@@ -1,0 +1,22 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html{
+    width: 100%;
+    height: 100vh; 
+}
+
+#content{
+      /* The image used */
+  background-image: url(./assets/background.jpg);
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+  /* Center and scale the image nicely */
+}
+
+
+
