@@ -18,12 +18,15 @@ body, html{
 
 h1 {
 font-family: 'MyFont';
-font-size: 4rem;
+font-size: clamp(2rem, 5vw, 5rem);
 color: white;
+position: absolute;
+top: 40%;
+left: 12%;
+width: 300px;
 }
 
 #content{
-      /* The image used */
   background-image: url(./assets/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;

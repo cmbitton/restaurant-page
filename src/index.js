@@ -1,5 +1,5 @@
 import './style.css'
-import background from './assets/background.jpg'
+import loadDom from './page-load'
 
-
-console.log('hello')
+const pageLoader = new loadDom();
+pageLoader.loadLandingPage();
