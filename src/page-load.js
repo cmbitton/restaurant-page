@@ -4,6 +4,7 @@ export default class LoadDom {
     constructor() {
         this.loadHeader();
         this.loadHeaderSubText();
+        this.loadDescriptionText();
     }
 
     loadHeader() {
@@ -20,5 +21,12 @@ export default class LoadDom {
         subtext.classList.add('heading-subtext');
         subtext.textContent = 'Restaurant landing page';
         this.headingContainer.append(subtext);
+    }
+
+    loadDescriptionText() {
+        const descriptionText = document.createElement('p');
+        descriptionText.classList.add('description-text');
+        descriptionText.textContent = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, molestias iusto iste hic assumenda nemo.'
+        this.headingContainer.append(descriptionText);
     }
 }
