@@ -10,7 +10,7 @@ export default class LoadDom {
         const heading = document.createElement('h1');
         this.headingContainer.classList.add('heading-container');
         heading.classList.add('main-heading');
-        heading.textContent = 'Downtown Delicacy';
+        heading.textContent = 'DOWNTOWN DELICACY';
         this.headingContainer.append(heading);
         this.content.append(this.headingContainer);
     }
