@@ -3,19 +3,31 @@
     padding: 0px;
     box-sizing: border-box;
 }
+@font-face {
+  font-family: 'MyFont';
+  src: url('./assets/g80-rd-standard-demo-generic-19517/Generic-G80-RD-Standard-DEMO.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
 
 body, html{
     width: 100%;
     height: 100vh; 
 }
 
+h1 {
+font-family: 'MyFont';
+font-size: 4rem;
+color: white;
+}
+
 #content{
       /* The image used */
   background-image: url(./assets/background.jpg);
   background-repeat: no-repeat;
-  height: 100vh;
   background-size: cover;
-  /* Center and scale the image nicely */
+  height: 100vh;
 }
 
 
