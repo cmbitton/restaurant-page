@@ -1,5 +1,7 @@
 import './style.css'
-import loadDom from './page-load'
+import LoadDom from './page-load'
+import Navbar from './navbar';
 
-const pageLoader = new loadDom();
+const pageLoader = new LoadDom();
+const nav = new Navbar();
 

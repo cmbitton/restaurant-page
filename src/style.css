@@ -41,6 +41,63 @@ html {
     left: 0px;
 }
 
+/*nav CSS */
+
+.navbar {
+    color: white;
+    position: absolute;
+    font-family: 'sans-serif';
+    display: grid;
+    grid-template-columns: 6fr repeat(4, 4fr) 5fr;
+    place-items: center;
+    width: 100%;
+    height: 150px;
+    padding: 20px 50px 0px 50px;
+    padding: 5px;
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
+}
+
+.logo{
+    margin-right: auto;
+    margin-left: 50px;
+
+}
+
+.search-form{
+    display: flex;
+    align-items: center;
+}
+
+.search{
+    height: 50px;
+    width: 300px;
+    background-color: #373737;
+    border: none;
+    border-radius: 25px;
+    padding-left: 25px;
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
+    color: white;
+}
+
+.search:focus{
+    border: none;
+    outline: none;
+}
+
+.search::placeholder{
+    color: white;
+}
+
+.homepage, .menu, .about, .contact {
+    height: fit-content;
+    cursor: pointer;
+    border-radius: 25px;
+}
+.homepage:hover, .menu:hover, .about:hover, .contact:hover {
+    background-color: #373737;
+    padding: 12px 30px;
+}
+
 .heading-container {
     color: white;
     position: absolute;
@@ -68,7 +125,7 @@ html {
 }
 
 @media screen {
-    @media (max-width: 960px) {
+    @media (max-width: 975px) {
         #content::before {
             filter: brightness(30%);
             left: -150%;
