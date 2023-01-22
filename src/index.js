@@ -9,17 +9,21 @@ const menuButton = document.querySelector('.menu');
 const homeButton = document.querySelector('.homepage');
 const content = document.querySelector('#content');
 
-menuButton.addEventListener('click', () => {
+menuButton.addEventListener('click', (e) => {
     content.innerHTML = "";
     if (content.classList.contains('content-primary')) content.classList.remove('content-primary');
     content.classList.add('content-secondary');
     nav.loadNavbar();
+    nav.clearNavSelection();
+    e.target.classList.add('button-selected');
 })
 
-homeButton.addEventListener('click', () => {
+homeButton.addEventListener('click', (e) => {
     content.innerHTML = "";
     if (content.classList.contains('content-secondary')) content.classList.remove('content-secondary');
     content.classList.add('content-primary');
     nav.loadNavbar();
     landingLoader.loadHomepage();
+    nav.clearNavSelection();
+    e.target.classList.add('button-selected');
 })

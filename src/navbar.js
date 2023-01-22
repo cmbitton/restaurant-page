@@ -14,10 +14,10 @@ export default class Navbar {
     loadNavbar () {
         this.navbar.classList.add('navbar');
         this.logo.classList.add('logo');
-        this.homepage.classList.add('homepage');
-        this.menu.classList.add('menu');
-        this.about.classList.add('about');
-        this.contact.classList.add('contact');
+        this.homepage.classList.add('homepage', 'navbutton', 'button-selected');
+        this.menu.classList.add('menu', 'navbutton');
+        this.about.classList.add('about', 'navbutton');
+        this.contact.classList.add('contact', 'navbutton');
         this.searchform.classList.add('search-form');
         this.search.classList.add('search');
 
@@ -41,5 +41,12 @@ export default class Navbar {
         this.navbar.append(this.contact);
         this.navbar.append(this.searchform);
         this.content.append(this.navbar);
+    }
+
+    clearNavSelection () {
+        const navButtons = [this.homepage, this.menu, this.about, this.contact];
+        for(const button of navButtons){
+            if(button.classList.contains('button-selected')) button.classList.remove('button-selected');
+        }
     }
 }
