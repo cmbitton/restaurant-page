@@ -2,6 +2,11 @@ export default class LoadDom {
     content = document.querySelector('#content');
     headingContainer = document.createElement('div');
     constructor() {
+        this.loadHomepage();
+    }
+
+    loadHomepage () {
+        this.headingContainer.innerHTML = "";
         this.loadHeader();
         this.loadHeaderSubText();
         this.loadDescriptionText();
