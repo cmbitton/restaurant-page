@@ -1,6 +1,7 @@
 import './style.css'
 import LoadDom from './page-load'
 import Navbar from './navbar';
+import Menu from './menu';
 
 const landingLoader = new LoadDom();
 const nav = new Navbar();
@@ -16,6 +17,7 @@ menuButton.addEventListener('click', (e) => {
     nav.loadNavbar();
     nav.clearNavSelection();
     e.target.classList.add('button-selected');
+    const menu = new Menu();
 })
 
 homeButton.addEventListener('click', (e) => {

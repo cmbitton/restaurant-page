@@ -60,33 +60,39 @@ body {
 
 .navbar {
     color: white;
-    position: absolute;
-    font-family: 'sans-serif';
-    display: grid;
-    grid-template-columns: 6fr repeat(4, 4fr) 5fr;
-    place-items: center;
+    position: relative;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    column-gap: 3vw;
     width: 100%;
-    height: 150px;
-    padding: 20px 50px 0px 50px;
-    padding: 5px;
+    height: 120px;
+    padding: 20px 5% 0px 5%;
     font-size: clamp(1rem, 1.3vw, 1.5rem);
     letter-spacing: 1px;
 }
 
 .logo{
     margin-right: auto;
-    margin-left: 50px;
+    width: min(16.5vw, 295px);
 
 }
 
 .search-form{
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    width: min(15vw, 275px);
+    flex-shrink: 1;
 }
 
 .search{
     height: 45px;
-    width: 275px;
+    flex-shrink: 1;
+    width: inherit;
     background-color: #373737;
     border: none;
     border-radius: 25px;
@@ -107,16 +113,16 @@ body {
 .homepage, .menu, .about, .contact {
     height: fit-content;
     cursor: pointer;
-    border-radius: 25px;
+    border-radius: 3px;
+    padding: 10px 15px;
     font-weight: 400;
 }
 .homepage:hover, .menu:hover, .about:hover, .contact:hover {
     background-color: #373737;
-    padding: 12px 30px;
 }
 
 .button-selected {
-    color: #f8d882;
+    color: #ffcc33;
 }
 
 /*landing page text */
@@ -147,6 +153,35 @@ body {
     margin-top: 30px;
 }
 
+/* Menu CSS */
+.menu-container {
+    width: 75%;
+    margin: 25px auto;
+    color: white;
+    position: relative;
+    text-align: center;
+    font-family: 'HeadingFont';
+    font-size: clamp(1.7rem, 2vw, 2rem);
+}
+.menu-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-button {
+    padding: 10px 15px;
+    margin: 10px;
+    height: fit-content;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+    font-weight: bold;
+    background-color: #ffcc33;
+}
+
+
 @media screen {
     @media (max-width: 975px) {
         .content-secondary::before {
@@ -156,9 +191,9 @@ body {
         }
 
         .content-primary::before {
-            filter: brightness(30%);
-            background-position: right;
+            filter: brightness(25%);
             background-size: cover;
+            background-position: right;
         }
 
         .heading-container {
