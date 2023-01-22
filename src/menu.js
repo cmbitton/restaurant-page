@@ -2,16 +2,19 @@ export default class Menu {
     content = document.querySelector('#content');
     menuContainer = document.createElement('div');
     heading = document.createElement('h1');
-
     menuButtonContainer = document.createElement('div');
     menuAllButton = document.createElement('button');
     menuStartersButton = document.createElement('button');
     menuEntreesButton = document.createElement('button');
     menuDrinksButton = document.createElement('button');
     menuDessertsButton = document.createElement('button');
+    menuItemContainer = document.createElement('div');
     constructor() {
         this.showHeading();
         this.loadMenuButtons();
+        this.menuContainer.append(this.menuItemContainer);
+        this.menuItemContainer.classList.add('menu-item-container');
+        this.loadAllMenuItems();
     }
 
     showHeading () {
@@ -42,7 +45,27 @@ export default class Menu {
                                         this.menuDrinksButton,
                                         this.menuDessertsButton);
         this.menuContainer.append(this.menuButtonContainer);
+    }
 
+    makeImageCard(num) {
+        const menuCard = document.createElement('div');
+        menuCard.classList.add(`menu-card-${num}`, 'menu-card');
+        return menuCard;
+    }
+
+    loadAllMenuItems() {
+        this.menuItemContainer.innerHTML = '';
+
+        //images
+
+        const menuCard1 = this.makeImageCard(1);
+        const menuCard2 = this.makeImageCard(2);
+        const menuCard3 = this.makeImageCard(3);
+        const menuCard4 = this.makeImageCard(4);
+
+
+        this.menuItemContainer.append(menuCard1, menuCard2, menuCard3, menuCard4);
+        this.menuContainer.append(this.menuItemContainer);
 
     }
 }
