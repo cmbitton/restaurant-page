@@ -254,7 +254,7 @@ body {
 
 /* About Page */
 
-.about-heading {
+.about-heading, .contact-heading {
     text-align: center;
     color: white;
     padding-bottom: 15px;
@@ -368,6 +368,10 @@ body {
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr;
             row-gap: 25px;
+        }
+
+        .about-heading {
+            padding: 0px;
         }
 
         .about-image {
