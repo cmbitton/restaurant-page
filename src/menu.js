@@ -47,10 +47,27 @@ export default class Menu {
         this.menuContainer.append(this.menuButtonContainer);
     }
 
-    makeImageCard(num) {
+    makeImageCard(itemNum, itemName, itemDescription, menuPrice) {
+        const menuCardContainer = document.createElement('div');
         const menuCard = document.createElement('div');
-        menuCard.classList.add(`menu-card-${num}`, 'menu-card');
-        return menuCard;
+        const menuItemName = document.createElement('h2');
+        const menuItemDescription = document.createElement('p');
+        const menuItemPrice = document.createElement('p');
+
+        menuCard.classList.add(`menu-card-${itemNum}`, 'menu-card');
+        menuCardContainer.classList.add('menu-card-container');
+        menuItemName.classList.add('menu-item-name');
+        menuItemDescription.classList.add('menu-item-description');
+        menuItemPrice.classList.add('menu-item-price');
+
+        menuItemName.textContent = itemName;
+        menuItemDescription.textContent = itemDescription;
+        menuItemPrice.textContent = menuPrice;
+        menuCardContainer.append(menuCard);
+        menuCardContainer.append(menuItemName);
+        menuCardContainer.append(menuItemDescription);
+        menuCardContainer.append(menuItemPrice);
+        return menuCardContainer;
     }
 
     loadAllMenuItems() {
@@ -58,14 +75,14 @@ export default class Menu {
 
         //images
 
-        const menuCard1 = this.makeImageCard(1);
-        const menuCard2 = this.makeImageCard(2);
-        const menuCard3 = this.makeImageCard(3);
-        const menuCard4 = this.makeImageCard(4);
-        const menuCard5 = this.makeImageCard(5);
-        const menuCard6 = this.makeImageCard(6);
-        const menuCard7 = this.makeImageCard(7);
-        const menuCard8 = this.makeImageCard(8);
+        const menuCard1 = this.makeImageCard(1, 'Bacon Jalapeño Burger', 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', '$14.99');
+        const menuCard2 = this.makeImageCard(2, 'Turkey Sandwich Sub', 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', '$12.49');
+        const menuCard3 = this.makeImageCard(3, 'Vanilla Cheesecake', 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', '$5.99');
+        const menuCard4 = this.makeImageCard(4, 'New York Style Pizza', 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', '$18.00');
+        const menuCard5 = this.makeImageCard(5, 'Cappuccino', 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', '$3.99');
+        const menuCard6 = this.makeImageCard(6, 'Buttermilk Pancakes', 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', '$8.50');
+        const menuCard7 = this.makeImageCard(7, 'Mohito', 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', '$11.00');
+        const menuCard8 = this.makeImageCard(8, 'Avocado Burger Sliders', 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', '$12.99');
 
 
         this.menuItemContainer.append(menuCard1, menuCard2, menuCard3, menuCard4, menuCard5, menuCard6, menuCard7, menuCard8);

@@ -29,7 +29,10 @@ body {
     background-color: #060606;
 }
 
-.content-primary {
+
+
+.content-primary::before {
+    content: '';
     background-image: url(./assets/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -50,8 +53,11 @@ body {
 /*nav CSS */
 
 .navbar {
-    color: white;
-    position: relative;
+    color: #eee;
+    background-color: black;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
     font-family: sans-serif;
     display: flex;
     align-items: center;
@@ -59,8 +65,8 @@ body {
     text-align: center;
     column-gap: 3vw;
     width: 100%;
-    height: 120px;
-    padding: 20px 5% 0px 5%;
+    height: 100px;
+    padding: 0px 5%;
     font-size: clamp(1rem, 1.3vw, 1.5rem);
     letter-spacing: 1px;
 }
@@ -148,11 +154,17 @@ body {
 .menu-container {
     width: 70%;
     margin: 25px auto;
+    padding-bottom: 25px;
+    margin-top: 40px;
     color: white;
     position: relative;
     text-align: center;
+    font-family: 'MainFont';
+    font-size: clamp(1.3rem, 1.3vw, 1.5rem);
+}
+
+.menu-heading {
     font-family: 'HeadingFont';
-    font-size: clamp(1.7rem, 2vw, 2rem);
 }
 
 .menu-button-container {
@@ -180,6 +192,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
     gap: 15px;
+    row-gap: 50px;
     margin-top: 25px;
 }
 
@@ -222,20 +235,30 @@ body {
     background-image: url(./assets/menu-pics/menu8.jpg)
 }
 
+.menu-item-name {
+    font-size: clamp(1.3rem, 1.3vw, 1.5rem);
+    margin-top: 15px;
+}
+
+.menu-item-description {
+    font-size: clamp(0.8rem, 1vw, 1.1rem);
+    color: #ccc;
+    margin-top: 10px;
+}
+
+.menu-item-price {
+    margin-top: 10px;
+    color: #ffcc33;
+}
 
 
 @media screen {
     @media (max-width: 975px) {
-        .content-secondary::before {
-            filter: brightness(30%);
-            background-position: top;
-            background-size: contain;
-        }
 
         .content-primary::before {
-            filter: brightness(25%);
             background-size: cover;
             background-position: right;
+            filter: brightness(30%);
         }
 
         .heading-container {
