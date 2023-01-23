@@ -151,8 +151,8 @@ body {
 }
 
 /* Menu CSS */
-.menu-container {
-    width: 70%;
+.menu-container, .about-container{
+    width: 75%;
     margin: 25px auto;
     padding-bottom: 25px;
     margin-top: 40px;
@@ -163,8 +163,9 @@ body {
     font-size: clamp(1.3rem, 1.3vw, 1.5rem);
 }
 
-.menu-heading {
+.menu-heading{
     font-family: 'HeadingFont';
+    font-size: clamp(2rem, 3vw, 3rem);
 }
 
 .menu-button-container {
@@ -190,7 +191,7 @@ body {
 
 .menu-item-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 15px;
     row-gap: 50px;
     margin-top: 25px;
@@ -199,7 +200,7 @@ body {
 .menu-card {
     background-size: cover;
     background-position: center;
-    height: max(275px, 10vh);
+    height: max(300px, 10vh);
     border-radius: 3px;
 }
 
@@ -251,6 +252,94 @@ body {
     color: #ffcc33;
 }
 
+/* About Page */
+
+.about-heading {
+    text-align: center;
+    color: white;
+    padding-bottom: 15px;
+    margin-top: 40px;
+    font-family: 'HeadingFont';
+    font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.about-subheading {
+    font-family: 'HeadingFont';
+    height: 100px;
+    padding-left: 80px;
+    display: grid;
+    place-items: center;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    background-image: url(./assets/leaf.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.about-image{
+    background-image: url('./assets/restarant-pic.jpg');
+    background-size: cover;
+    background-position: center;
+    grid-row:  1 / -1;
+}
+
+.about-content-container {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    grid-template-rows: 1fr 4fr 2fr;
+    column-gap: 75px;
+}
+
+.about-right-container {
+    grid-row: 1 / -1;
+    display: flex;
+    flex-direction: column;
+}
+
+.paragraph-container p {
+    margin-top: 15px;
+    font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+    color: #ccc;
+}
+
+/* About Icons */
+
+.icons-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.icon-1-image {
+    background-image: url(./assets/about-icons/chef-hat.png);
+    width: clamp(32px, 5vw, 64px);
+    height: clamp(32px, 5vw, 64px);
+    background-size: contain;
+    margin: 0 auto;
+}
+
+.icon-2-image {
+    background-image: url(./assets/about-icons/ingredients-icon.png);
+    width: clamp(32px, 5vw, 64px);
+    height: clamp(32px, 5vw, 64px);
+    background-size: contain;
+    margin: 0 auto;
+}
+
+.icon-3-image {
+    background-image: url(./assets/about-icons/recipe-icon.png);
+    width: clamp(32px, 5vw, 64px);
+    height: clamp(32px, 5vw, 64px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.icon-text {
+    text-align: center;
+    color: white;
+    font-size: clamp(0.7rem, 1.1vw, 1.1rem);
+    margin-top: 15px;
+}
 
 @media screen {
     @media (max-width: 975px) {
@@ -271,6 +360,22 @@ body {
         .description-text{
             width: 60%;
             margin: 30px auto 0 auto;
+        }
+
+        /* About Page */
+
+        .about-content-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            row-gap: 25px;
+        }
+
+        .about-image {
+            grid-row: 1 / 2;
+        }
+
+        .about-right-container {
+            grid-row: 2 / 3;
         }
     }
 }
