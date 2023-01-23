@@ -29,12 +29,7 @@ body {
     background-color: #060606;
 }
 
-#content {
-    height: 100vh;
-}
-
-.content::before {
-    content: "";
+.content-primary {
     background-image: url(./assets/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,12 +43,8 @@ body {
 .content-secondary {
     width: 100vw;
 }
-.content-secondary::before {
-    content: "";
-    background-image: url(./assets/background-secondary.jpg);
-    background-repeat: repeat-y;
-    background-position: top;
-    width: 100%;
+.content-secondary {
+    background-color: #131313;
 }
 
 /*nav CSS */
@@ -155,7 +146,7 @@ body {
 
 /* Menu CSS */
 .menu-container {
-    width: 75%;
+    width: 70%;
     margin: 25px auto;
     color: white;
     position: relative;
@@ -188,13 +179,15 @@ body {
 .menu-item-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-    gap: 10px;
+    gap: 15px;
+    margin-top: 25px;
 }
 
 .menu-card {
     background-size: cover;
     background-position: center;
-    height: max(300px, 10vh);
+    height: max(275px, 10vh);
+    border-radius: 3px;
 }
 
 .menu-card-1 {
@@ -206,11 +199,27 @@ body {
 }
 
 .menu-card-3 {
-    background-image: url(./assets//menu-pics/menu3.jpg);
+    background-image: url(./assets/menu-pics/menu3.jpg);
 }
 
 .menu-card-4 {
-    background-image: url(./assets//menu-pics/menu4.jpg);
+    background-image: url(./assets/menu-pics/menu4.jpg);
+}
+
+.menu-card-5 {
+    background-image: url(./assets/menu-pics/menu5.jpg)
+}
+
+.menu-card-6 {
+    background-image: url(./assets/menu-pics/menu6.jpg)
+}
+
+.menu-card-7 {
+    background-image: url(./assets/menu-pics/menu7.jpg)
+}
+
+.menu-card-8 {
+    background-image: url(./assets/menu-pics/menu8.jpg)
 }
 
 

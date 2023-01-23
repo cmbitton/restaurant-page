@@ -62,9 +62,13 @@ export default class Menu {
         const menuCard2 = this.makeImageCard(2);
         const menuCard3 = this.makeImageCard(3);
         const menuCard4 = this.makeImageCard(4);
+        const menuCard5 = this.makeImageCard(5);
+        const menuCard6 = this.makeImageCard(6);
+        const menuCard7 = this.makeImageCard(7);
+        const menuCard8 = this.makeImageCard(8);
 
 
-        this.menuItemContainer.append(menuCard1, menuCard2, menuCard3, menuCard4);
+        this.menuItemContainer.append(menuCard1, menuCard2, menuCard3, menuCard4, menuCard5, menuCard6, menuCard7, menuCard8);
         this.menuContainer.append(this.menuItemContainer);
 
     }
