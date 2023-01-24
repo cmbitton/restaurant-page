@@ -176,7 +176,7 @@ body {
     margin-top: 15px;
 }
 
-.menu-button {
+.menu-button, .reservation-submit-button  {
     padding: 10px 15px;
     margin: 10px;
     height: fit-content;
@@ -344,6 +344,13 @@ body {
 
 /* Contact Page */
 
+.contact-container {
+    display: grid;
+    margin-top: 0px;
+    column-gap: 25px;
+    grid-template-columns: 3fr 2fr;
+}
+
 .book-heading {
     grid-column: 1 / -1;
     text-align: center;
@@ -354,9 +361,44 @@ body {
     font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
+.hours-heading {
+    text-align: center;
+    color: white;
+    padding-bottom: 15px;
+    margin-top: 10px;
+    font-family: 'HeadingFont';
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.hours-text {
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    margin-bottom: 30px;
+}
+
 .book-table-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
+}
+
+.hours-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: black;
+    border-radius: 3px;
+    padding: 30px;
+    color: #ccc;
+}
+
+.weekday-hours-container, .saturday-hours-container, .sunday-hours-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3px;
+    margin-bottom: 20px;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    color: white;
+    border-bottom: thin solid white;
 }
 
 .book-table-form {
@@ -364,13 +406,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    column-gap: 20px;
-}
-
-.contact-container {
-    display: grid;
-    margin-top: 0px;
-    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 form div {
@@ -386,9 +422,45 @@ form div label {
     font-size: clamp(0.8rem, 1vw, 1.1rem);
 }
 
+.reservation-submit-button {
+    grid-column: 1 / -1;
+}
+
+
+/* changes color of date and time picker to white */
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+/* Prevent autofill form from turning white */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 60000000s 0s, color 60000000s 0s;
+}
+input[data-autocompleted] {
+    background-color: black !important;
+}
+
+/* change placeholder color */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ccc;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ccc;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ccc;
+  }
+
 form div input {
-    width: 300px;
+    width: min(300px, 20vw);
     height: 50px;
+    font-size: 1.2rem;
+    padding: 0px 10px;
+    color: #ccc;
     background-color: #000;
     border-radius: 3px;
     outline: none;
@@ -435,6 +507,16 @@ form div input {
 
         .about-right-container {
             grid-row: 2 / 3;
+        }
+
+        /* Contact Page */
+
+        .contact-container {
+            grid-template-columns: 1fr;
+        }
+
+        form div input {
+            width: min(300px, 35vw);
         }
     }
 }
