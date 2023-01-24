@@ -151,7 +151,7 @@ body {
 }
 
 /* Menu CSS */
-.menu-container, .about-container{
+.menu-container, .about-container, .contact-container{
     width: 75%;
     margin: 25px auto;
     padding-bottom: 25px;
@@ -340,6 +340,60 @@ body {
     font-size: clamp(0.7rem, 1.1vw, 1.1rem);
     margin-top: 15px;
 }
+
+/* Contact Page */
+
+.book-heading {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: white;
+    padding-bottom: 15px;
+    margin-top: 40px;
+    font-family: 'HeadingFont';
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.book-table-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.book-table-form {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    column-gap: 20px;
+}
+
+.contact-container {
+    display: grid;
+    margin-top: 0px;
+    grid-template-columns: 1fr 1fr;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form div label {
+    color: white;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #ffcc33;
+    font-size: clamp(0.8rem, 1vw, 1.1rem);
+}
+
+form div input {
+    width: 300px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+}
+
 
 @media screen {
     @media (max-width: 975px) {
