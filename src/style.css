@@ -30,7 +30,9 @@ body {
     background-color: #060606;
 }
 
-
+h1, h2, h3 {
+    overflow: initial;
+}
 
 .content-primary::before {
     content: '';
@@ -76,6 +78,11 @@ body {
     margin-right: auto;
     width: min(16.5vw, 295px);
 
+}
+
+.nav-button-container {
+    display: flex;
+    column-gap: 25px;
 }
 
 .search-form{

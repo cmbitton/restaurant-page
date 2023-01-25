@@ -2,6 +2,7 @@ export default class Navbar {
     content = document.querySelector('#content');
     navbar = document.createElement('div');
     logo = document.createElement('h3');
+    navButtonContainer = document.createElement('div');
     homepage = document.createElement('p');
     menu = document.createElement('p');
     about = document.createElement('p');
@@ -14,6 +15,7 @@ export default class Navbar {
     loadNavbar () {
         this.navbar.classList.add('navbar');
         this.logo.classList.add('logo');
+        this.navButtonContainer.classList.add('nav-button-container');
         this.homepage.classList.add('homepage', 'navbutton', 'button-selected');
         this.menu.classList.add('menu', 'navbutton');
         this.about.classList.add('about', 'navbutton');
@@ -35,11 +37,8 @@ export default class Navbar {
 
         this.searchform.append(this.search);
         this.navbar.append(this.logo);
-        this.navbar.append(this.homepage)
-        this.navbar.append(this.menu);
-        this.navbar.append(this.about);
-        this.navbar.append(this.contact);
-        this.navbar.append(this.searchform);
+        this.navButtonContainer.append(this.homepage, this.menu, this.about, this.contact)
+        this.navbar.append(this.navButtonContainer, this.searchform)
         this.content.append(this.navbar);
     }
 
